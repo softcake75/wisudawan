@@ -17,30 +17,6 @@ class UserController extends BaseController
 {
     $model = new UserModel();
     $data['users'] = $model->findAll();
-
-    // // Mengambil informasi sesi
-    // $nama = session()->get('nama');
-    // $role = session()->get('role');
-    // $idUsers = session()->get('log');
-
-    // // Inisialisasi data untuk dikirim ke view
-    // $data = [];
-
-    // if ($role == 1) {
-    //     // Jika peran adalah 1, ambil semua data pengguna
-    //     $data['users'] = $model->findAll();
-    // } elseif ($role == 2) {
-    //     // Jika peran adalah 2, ambil data pengguna berdasarkan id_users
-    //     $user = $model->getUserById($idUsers);
-
-    //     // Periksa apakah data pengguna ditemukan
-    //     if ($user) {
-    //         $data['users'] = [$user]; // Mengubah menjadi array agar sesuai dengan struktur data di view
-    //     } else {
-    //         $data['users'] = []; // Set array kosong jika tidak ada data pengguna ditemukan
-    //     }
-    // }
-
     return view('user/index', $data);
 }
 
