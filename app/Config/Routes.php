@@ -21,7 +21,7 @@ $routes->get('/slider', 'SliderController::index');
 $routes->post('/slider/store', 'SliderController::store');
 
 // app/Config/Routes.php
-$routes->get('/wisudawan', 'SliderController::wisudawan');
+$routes->get('/', 'SliderController::wisudawan');
 
 $routes->post('/slider/uploadExcel', 'SliderController::uploadExcel');
 $routes->get('/slider/downloadTemplate', 'SliderController::downloadTemplate');

@@ -79,8 +79,8 @@
                                                         <td class="text-center"><img src="<?= base_url($slider['image']) ?>" alt="<?= $slider['title'] ?>" width="100"></td>
                                                         <td class="text-center"><?= $slider['description'] ?? ''  ?></td>
                                                         <td class="text-center"><?= $slider['title'] ?? ''  ?></td>
-                                                        <td class="text-center"><?= $slider['id_kategori'] ?? ''  ?></td>
-                                                        <td class="text-center"><?= $slider['id_prodi'] ?? ''  ?></td>
+                                                        <td class="text-center"><?= $slider['kategori'] ?? ''  ?></td>
+                                                        <td class="text-center"><?= $slider['nama_prodi'] ?? ''  ?></td>
                                                         <td class="text-center">
                                                             <a href="slider/edit/<?= $slider['id_slider'] ?>" class="btn btn-sm btn-info mb-2">Edit</a>
                                                         </td>
