@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 12, 2024 at 10:48 AM
+-- Generation Time: Jul 16, 2024 at 10:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -82,8 +82,9 @@ INSERT INTO `prodi` (`id_prodi`, `nama_prodi`) VALUES
 --
 
 CREATE TABLE `sliders` (
-  `id` int(5) UNSIGNED NOT NULL,
-  `id_kategori` int(11) NOT NULL,
+  `id_slider` int(5) UNSIGNED NOT NULL,
+  `kategori` varchar(10) NOT NULL,
+  `id_prodi` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` text NOT NULL,
@@ -94,6 +95,15 @@ CREATE TABLE `sliders` (
   `updated_by` int(5) UNSIGNED DEFAULT NULL,
   `deleted_by` int(5) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `sliders`
+--
+
+INSERT INTO `sliders` (`id_slider`, `kategori`, `id_prodi`, `image`, `title`, `description`, `created_at`, `updated_at`, `deleted_at`, `created_by`, `updated_by`, `deleted_by`) VALUES
+(1, 'Pujian', 1, 'image/1721116899_a50340ef4dfc9f69dd61.jpg', 'HEA', 'SAHE', '2024-07-16 08:01:39', NULL, NULL, 1, 1, NULL),
+(2, 'Memuaskan', 1, 'image/1721117409_7082ecdfc68ff8ca4e47.png', 'saryono', 'naningnung', '2024-07-16 08:10:09', NULL, NULL, 1, 1, NULL),
+(3, 'Sangat Mem', 2, 'image/1721117462_929b626fe567d4c5cd43.jpg', 'hello kitty', 'aduhai', '2024-07-16 08:11:02', NULL, NULL, 1, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -143,7 +153,7 @@ ALTER TABLE `prodi`
 -- Indexes for table `sliders`
 --
 ALTER TABLE `sliders`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id_slider`);
 
 --
 -- Indexes for table `users`
@@ -177,7 +187,7 @@ ALTER TABLE `prodi`
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id` int(5) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_slider` int(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

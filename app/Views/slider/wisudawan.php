@@ -17,7 +17,7 @@
                 <?php $imgPath = base_url(esc($slider['image'])); ?>
                 <div class="slide">
                     <div class="name"><?= esc($slider['title']) ?></div>
-                    <img class="center" src="<?= $imgPath ?>" alt="Photo">
+                    <img src="<?= $imgPath ?>" alt="Photo">
                     <div class="number"><?= esc($slider['id_prodi']) ?></div>
                     <div class="department"><?= esc($slider['description']) ?></div>
                 </div>
