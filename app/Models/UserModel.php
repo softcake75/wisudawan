@@ -6,22 +6,29 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table            = 'users';
-    protected $primaryKey       = 'id_user';
-    protected $returnType       = 'array';
-    protected $allowedFields    = ['username', 'password', 'nama', 'prodi', 'role'];
+    protected $table = 'users';
+    protected $primaryKey = 'id_user';
+    protected $returnType = 'array';
+    protected $allowedFields = ['username', 'password', 'nama', 'prodi', 'role'];
 
-    public function login($username, $password)
+    public function get_data($username, $password)
     {
-        return $this->db->table('users')->where([
-            'username' => $username,
-            'password' => $password,
-            ])->get()->getRowArray();
+        $user = $this->where('username', $username)->first();
 
+        if ($user && password_verify($password, $user['password'])) {
+            return $user;
+        }
+
+        return null;
     }
 
     public function getUserById($idUsers)
     {
         return $this->where('id_user', $idUsers)->first();
+    }
+
+    public function getUserByUsername($username)
+    {
+        return $this->where('username', $username)->first();
     }
 }

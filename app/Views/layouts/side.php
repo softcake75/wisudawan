@@ -52,7 +52,7 @@
 
         <li class="nav-header">Lainnya</li>
         <li class="nav-item">
-          <a href="<?= base_url('user/logout') ?>" class="nav-link">
+          <a href="<?= base_url('logout') ?>" class="nav-link">
             <i class="nav-icon fas fa-ellipsis-h"></i>
             <p>Logout</p>
           </a>

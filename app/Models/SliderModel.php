@@ -10,7 +10,7 @@ class SliderModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'id_prodi', 'kategori', 'title', 'image', 'npm',
-        'created_at', 'update_at', 'deleted_at', 'created_by', 
+        'created_at', 'updated_at', 'deleted_at', 'created_by', 
         'updated_by', 'deleted_by'
     ];
 

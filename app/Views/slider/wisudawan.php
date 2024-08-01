@@ -30,10 +30,9 @@
                 <?php $imgPath = base_url(esc($slider['image'])); ?>
                 <div class="slide">
                     <div class="name"><?= esc($slider['title']) ?></div><br>
-                    <div class="name"><?= esc($slider['npm']) ?></div><br>
+                    
                     <img src="<?= $imgPath ?>" alt="Photo"><br>
-                    <div class="prodi"><?= esc($slider['nama_prodi']) ?></div><br>
-                    <div class="name"><?= esc($slider['kategori']) ?></div>
+                    
                 </div>
             <?php endforeach; ?>
         </div>

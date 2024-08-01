@@ -119,18 +119,7 @@
                     <!-- Isi form untuk input data -->
                     <form action="<?= base_url('user/store') ?>" method="post">
                         <!-- ... -->
-                        <div class="form-group">
-                            <label for="nama">Nama Bank</label>
-                            <input type="text" class="form-control" id="nama" name="nama" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="role">Akses</label>
-                            <select class="form-control" id="role" name="role" required>
-                                <option value="1">Superadmin</option>
-                                <option value="2">Admin</option>
-                                <!-- Tambahkan opsi sesuai kebutuhan -->
-                            </select>
-                        </div>
+                        <!--  -->
                         <div class="form-group">
                             <label for="username"> Username </label>
                             <input type="text" class="form-control" id="username" name="username" required>
@@ -138,10 +127,6 @@
                         <div class="form-group">
                             <label for="password"> Password </label>
                             <input type="text" class="form-control" id="password" name="password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="prodi"> Prodi </label>
-                            <input type="text" class="form-control" id="prodi" name="prodi" required>
                         </div>
                         <!-- (Tambahkan input fields sesuai kebutuhan Anda) -->
                         <button type="submit" class="btn btn-primary">Simpan</button>
