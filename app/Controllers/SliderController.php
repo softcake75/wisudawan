@@ -14,7 +14,7 @@ class SliderController extends BaseController
     public function index()
     {
         $model = new SliderModel();
-        $data['slider'] = $model->findAll();
+        $data['slider'] = $model->getSlidersWithProdi();
         return view('slider/index', $data);
     }
 
@@ -45,7 +45,7 @@ class SliderController extends BaseController
                 'kategori' => $this->request->getPost('kategori'),
                 'title' => $this->request->getPost('title'),
                 'image' => 'image/' . $newName, // Simpan path ke gambar
-                'description' => $this->request->getPost('description'),
+                'npm' => $this->request->getPost('npm'),
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
                 'deleted_at' => null,
@@ -65,7 +65,7 @@ class SliderController extends BaseController
     public function wisudawan()
     {
         $model = new SliderModel();
-        $data['sliders'] = $model->findAll();
+        $data['sliders'] = $model->getSlidersWithProdi();
         return view('slider/wisudawan', $data);
     }
 
@@ -89,7 +89,7 @@ class SliderController extends BaseController
                     'kategori' => $row[1],
                     'title' => $row[2],
                     'image' => $row[3],
-                    'description' => $row[4],
+                    'npm' => $row[4],
                     'created_at' => date('Y-m-d H:i:s'),
                     'updated_at' => date('Y-m-d H:i:s'),
                     'deleted_at' => null,

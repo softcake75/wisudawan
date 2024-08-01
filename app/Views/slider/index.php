@@ -63,8 +63,8 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Images</th>
-                                                <th>Deskripsi</th>
-                                                <th>Judul</th>
+                                                <th>Nama Wisudawan</th>
+                                                <th>NPM</th>
                                                 <th>Kategori</th>
                                                 <th>Program Studi</th>
                                                 <th>#</th>
@@ -77,8 +77,9 @@
                                                     <tr>
                                                         <td class="text-center"><?= $no++; ?></td>
                                                         <td class="text-center"><img src="<?= base_url($slider['image']) ?>" alt="<?= $slider['title'] ?>" width="100"></td>
-                                                        <td class="text-center"><?= $slider['description'] ?? ''  ?></td>
+                                                        
                                                         <td class="text-center"><?= $slider['title'] ?? ''  ?></td>
+                                                        <td class="text-center"><?= $slider['npm'] ?? ''  ?></td>
                                                         <td class="text-center"><?= $slider['kategori'] ?? ''  ?></td>
                                                         <td class="text-center"><?= $slider['nama_prodi'] ?? ''  ?></td>
                                                         <td class="text-center">
@@ -157,12 +158,12 @@
                             <input type="file" class="form-control" id="image" name="image" required>
                         </div>
                         <div class="form-group">
-                            <label for="description">Deskripsi</label>
-                            <input type="text" class="form-control" id="description" name="description" required>
+                            <label for="title">Nama Wisudawan</label>
+                            <input type="text" class="form-control" id="title" name="title" required>
                         </div>
                         <div class="form-group">
-                            <label for="title">Judul</label>
-                            <input type="text" class="form-control" id="title" name="title" required>
+                            <label for="npm">NPM</label>
+                            <input type="text" class="form-control" id="npm" name="npm" required>
                         </div>
                         <div class="form-group">
                             <label for="kategori">Kategori Lulusan</label>
@@ -175,9 +176,10 @@
                         <div class="form-group">
                             <label for="id_prodi">Program Studi</label>
                             <select name="id_prodi" id="id_prodi" class="form-control">
-                                <option value="1">S1 Teknik Informatika</option>
-                                <option value="2">S1 PAI</option>
-                                <option value="3">S1 Manajemen</option>
+                                <option value="1">S2 Manajemen</option>
+                                <option value="2">PPG Fakultas Keguruan dan Ilmu Pendidikan</option>
+                                <option value="3">S1 Teknik Informatika</option>
+                                <option value="4">S1 Sistem Informasi</option>
                             </select>
                         </div>
                         <input type="hidden" name="created_at" value="<?= date('Y-m-d H:i:s') ?>">
